@@ -1,23 +1,40 @@
-function StartTime() {
-    seconds = 120;
-    s = document.getElementById("seconds");
-    m = document.getElementById("minutes");
-    timePlay = setInterval(function()) {
-        seconds--;
-        secs = seconds;
-        mins = 2;
-            while (secs >= 60) {
-            mins --;
-            secs -= 60;
-    };
-        if (mins < 10) m.innerHTML = "0" + mins;
-            else m.innerHTML = mins;
-        if (secs < 10) s.innerHTML = "0" + secs;
-            else s.innerHTML = secs;
-  }, 1000};
+console.log("linked");
+
+var start = document.getElementById("button-play");
+start.onclick = function(){
+    startTimer();
+};
+
+    var i;
+    var restar;
+    var cambiar01;
+    var msn;
 
 
-
-function ResetTime() {
-    clearInterval(timePlay);
+function startTimer(){
+     i=9;
+     restar = setInterval(restar,1000);
+     cambiar01 = setTimeout(cambiar01,1000);
+     msn = setTimeout(msn,10000);  
 }
+
+
+function cambiar01(){
+	document.getElementById('minutes').innerHTML = '00';
+}
+
+function restar(){
+	document.getElementById('seconds').textContent = i; i--;
+    if (i < 0) {
+	   clearInterval(restar);
+    } else if (i < 10) {
+        i = '0'+i;
+  }
+}
+
+
+function msn(){
+    document.getElementById('game-over').innerHTML = $("#game-over").css("opacity",1);
+}
+
+

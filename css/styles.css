@@ -1,21 +1,22 @@
 body {
     font-family: fantasy, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    background-color: darkkhaki;
+    margin: 0;
+    padding: 0;
+    background-color: silver;
 }
 
 #board {
-    background-color: darkslategray;
+    background-color: darkkhaki;
     background-size: 1000px;
     border: 25px solid green;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 550px; 
-    margin: auto;
+    margin: 0 auto;
     position: relative;
+    padding: 0;
     text-align: center;
     top: 15px;
-    width: 1000px;        
+    width: 1000px; 
 }
 
 
@@ -36,7 +37,7 @@ body {
     border: 10px dotted red;
     border-radius: 5px;
     height: 55px;
-    left: 25%;
+    left: 240px;
     margin: 0;
     position: absolute;
     top: 220px;
@@ -61,17 +62,35 @@ body {
 }
 
 
+/* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #car {
-    box-shadow: 2em 1.2em 0 -.05em black, 2.7em 2em 0 -.07em red, 0.1em 2em 0 0 red, 0em 3em 0 0 black, 1em 2em 0 .1em red, 0 1em 0 0 black, 2em 2.9em 0 -.05em black, 2em 2em 0 0 red;
+    box-shadow: 1.5em 0 0 -.07em red, 1em 0 0 0 red, 0 0 0 .15em red, -0.9em 0 0 0 red, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em;
-    top: 70px;
-    left: 430px;
+    top: 80px;
+    left: 450px;
     position: absolute;
     box-sizing: border-box;
     border-radius: 4px;
     z-index: 999;
+    margin: 6px;
 }
+
+#car {
+    transition: .3s ease-in;
+    
+ /*   perspective: 800px; 
+	perspective-origin: 50% 100px;*/
+}
+
+
+
+
+
+
+
+
 
 .down {
     transform: rotate(90deg);
@@ -84,17 +103,14 @@ body {
 .right {
     transform: rotate(360deg);
 }
+
 .left {
     transform: rotate(180deg);
 }
 
-
-
 .container-lifes {
     float: left;    
-    text-align: left;
-    letter-spacing: 4px;
-    background-color: dimgray;
+    background-color: darkkhaki;
     width: 100px;
     height: 280px;
     position: relative;
@@ -102,30 +118,45 @@ body {
     left: 20px;
     padding: 0;
     border: 8px solid green;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-.container-lifes ul li, h3 {
-    text-align: left;
+
+.crashed{
+    border: 20px solid red;
+    
+}
+
+.container-lifes ul li {
     box-sizing: border-box;
     list-style-type: none;
-    top: 0px;
-    left: -15px;
+    top: 0;
+    left: 0;
     padding: 0;
     position: relative;
 }
 
+.container-lifes ul li h2 {
+    text-align: center;
+    letter-spacing: 4px;
+    margin-left: -35px;
+}
+
+/* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-1 {
-    box-shadow: 2em 1.2em 0 -.05em black, 2.7em 2em 0 -.07em blue, 0.1em 2em 0 0 blue, 0em 3em 0 0 black, 1em 2em 0 .1em blue, 0 1em 0 0 black, 2em 2.9em 0 -.05em black, 2em 2em 0 0 blue;
+    box-shadow: 1.5em 0 0 -.07em blue, 1em 0 0 0 blue, 0 0 0 .15em blue, -0.9em 0 0 0 blue, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
-    margin: -10px 0 5px 0;
+    margin: 40px 0 5px 0;
     position: relative;
     border-radius: 4px;
 }
 
+/* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-2 {
-    box-shadow: 2em 1.2em 0 -.05em black, 2.7em 2em 0 -.07em yellow, 0.1em 2em 0 0 yellow, 0em 3em 0 0 black, 1em 2em 0 .1em yellow, 0 1em 0 0 black, 2em 2.9em 0 -.05em black, 2em 2em 0 0 yellow;
+    box-shadow: 1.5em 0 0 -.07em yellow, 1em 0 0 0 yellow, 0 0 0 .15em yellow, -0.9em 0 0 0 yellow, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
     margin: 50px 0 5px 0;
@@ -133,8 +164,10 @@ body {
     border-radius: 4px;
 }
 
+/* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-3 {
-    box-shadow: 2em 1.2em 0 -.05em black, 2.7em 2em 0 -.07em white, 0.1em 2em 0 0 white, 0em 3em 0 0 black, 1em 2em 0 .1em white, 0 1em 0 0 black, 2em 2.9em 0 -.05em black, 2em 2em 0 0 white;
+    box-shadow: 1.5em 0 0 -.07em white, 1em 0 0 0 white, 0 0 0 .15em white, -0.9em 0 0 0 white, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
     margin: 50px 0 5px 0;
@@ -147,14 +180,14 @@ body {
     float: right; 
     text-align: center;
     letter-spacing: 4px;
-    background-color: dimgray;
+    background-color: darkkhaki;
     width: 110px;
     height: 130px;
     position: absolute;
     right: 15px;
     top: 15px;
     border: 8px solid green;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 .container-score {
@@ -183,6 +216,22 @@ body {
     left: 0;
 }
 
+#game-over {
+    /*background-image: url("../img/game-over-logo.png");*/
+    background-repeat: no-repeat;
+    height: 630px;
+    width: 1122px;
+    margin: 0 auto;
+    position: fixed;
+    top: 1px;
+    left: 120px;
+    opacity: 0;
+    z-index: 9999;
+    transition-duration: 4000ms;
+    
+    
+}
+
 #time-play {
     font-size: 30px;
     margin: 0;
@@ -193,42 +242,77 @@ body {
 
 #button-play {    
     float: left; 
-    text-align: center;
-    font-size: 30px;
-    font-family: fantasy;
-    letter-spacing: 3px;
-    background-color: red;
-    width: 115px;
-    height: 90px;
-    position: relative;
+    letter-spacing: 2px;    
     left: -225px;
-    margin: 0px;
-    top: 510px;    
-    border-radius: 5px;
 }
-
 
 #button-reset {    
     float: right; 
-    text-align: center;
-    font-size: 30px;
+    text-align: left;
+    letter-spacing: .5px;    
+    right: 20px;
+        
+}
+
+.button {
+    border-radius: 8px;
+    padding: 15px 25px;
     font-family: fantasy;
-    letter-spacing: 3px;
-    background-color: red;
+    margin: 0px;
+    top: 510px;
+    background-color: #FF2121;
     width: 115px;
     height: 90px;
     position: relative;
-    right: 20px;
-    margin: 0px;
-    top: 510px;    
-    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px gray;
+    font-size: 30px;
 }
+
+
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+
+
+
+
+
 
 .goal-flag {
     float: left;
     width: 130px;
     height: 80px;
     position: relative;
-    top: 40px;
-    left: -100px;
+    top: 45px;
+    left: -102px;
 }
+
+
+/*.car {
+  animation-duration: 1s;
+  animation-name: ease;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+
+@keyframes ease {
+  from {
+    margin-right: 0%;
+    width: 20%
+  }
+
+  to {
+    margin-left: 30%;
+    width: 30%;
+  }
+}
+*/
