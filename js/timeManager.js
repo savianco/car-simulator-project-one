@@ -1,8 +1,10 @@
 console.log("linked");
 
 var start = document.getElementById("button-play");
+var allowMoves = false;
 start.onclick = function(){
     startTimer();
+    allowMoves = true;
 };
 
     var i;
@@ -10,12 +12,13 @@ start.onclick = function(){
     var cambiar01;
     var msn;
 
-
+////// funcion del croometro ////////////////////
+var timer;
 function startTimer(){
-     i=9;
+     i=59;
      restar = setInterval(restar,1000);
      cambiar01 = setTimeout(cambiar01,1000);
-     msn = setTimeout(msn,10000);  
+     timer = setTimeout(msn,60000);  
 }
 
 
@@ -34,7 +37,7 @@ function restar(){
 
 
 function msn(){
-    document.getElementById('game-over').innerHTML = $("#game-over").css("opacity",1);
+    document.getElementById("game-over").innerHTML = $("#game-over").css("opacity",1);
 }
 
 

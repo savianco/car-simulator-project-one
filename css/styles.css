@@ -7,15 +7,15 @@ body {
 
 #board {
     background-color: darkkhaki;
-    background-size: 1000px;
+    background-size: 1000px 550px;
     border: 25px solid green;
-    border-radius: 15px;
+    border-radius: 30px;
     height: 550px; 
     margin: 0 auto;
     position: relative;
     padding: 0;
     text-align: center;
-    top: 15px;
+    top: 10px;
     width: 1000px; 
 }
 
@@ -24,7 +24,7 @@ body {
     background-image: url("../img/start-flag.jpg");
     background-size: 24px 260px;
     height: 220px;
-    left: 50%;
+    left: 500px;
     margin: 0px;
     position: absolute;
     top: 0px;
@@ -62,34 +62,31 @@ body {
 }
 
 
-/* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #car {
-    box-shadow: 1.5em 0 0 -.07em red, 1em 0 0 0 red, 0 0 0 .15em red, -0.9em 0 0 0 red, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
-    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
-    width: 1em;
-    height: 1em;
-    top: 80px;
-    left: 450px;
+    background-image: url("../img/car.png");
+    background-size: 80px 60px;
+    top: 50px;
+    left: 415px;
     position: absolute;
-    box-sizing: border-box;
-    border-radius: 4px;
     z-index: 999;
-    margin: 6px;
+    margin: 0 auto;
+    height: 60px;
+    width: 80px;
 }
 
-#car {
-    transition: .3s ease-in;
-    
- /*   perspective: 800px; 
-	perspective-origin: 50% 100px;*/
+/*  #car {
+    transition: .3s linear; */
+/*   
+   perspective: 800px; 
+	perspective-origin: 50% 100px;
+} */
+
+#car.crashed {
+    background-image: url("../img/boom.png");
+    height: 100px;
+    width: 100px;
+    background-size: cover;
 }
-
-
-
-
-
-
-
 
 
 .down {
@@ -98,14 +95,17 @@ body {
 
 .up {
     transform: rotate(270deg);
-}
+
+}   
 
 .right {
     transform: rotate(360deg);
+
 }
 
 .left {
     transform: rotate(180deg);
+
 }
 
 .container-lifes {
@@ -122,10 +122,6 @@ body {
 }
 
 
-.crashed{
-    border: 20px solid red;
-    
-}
 
 .container-lifes ul li {
     box-sizing: border-box;
@@ -136,16 +132,20 @@ body {
     position: relative;
 }
 
-.container-lifes ul li h2 {
+.container-lifes ul h2 {
     text-align: center;
     letter-spacing: 4px;
     margin-left: -35px;
 }
 
+
+
+
+
 /* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-1 {
-    box-shadow: 1.5em 0 0 -.07em blue, 1em 0 0 0 blue, 0 0 0 .15em blue, -0.9em 0 0 0 blue, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
-    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
+    box-shadow: 1.5em 0 0 -.07em red, 1em 0 0 0 red, 0 0 0 .15em red, -0.9em 0 0 0 red, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: aqua; /* PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
     margin: 40px 0 5px 0;
@@ -155,8 +155,8 @@ body {
 
 /* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-2 {
-    box-shadow: 1.5em 0 0 -.07em yellow, 1em 0 0 0 yellow, 0 0 0 .15em yellow, -0.9em 0 0 0 yellow, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
-    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
+    box-shadow: 1.5em 0 0 -.07em red, 1em 0 0 0 red, 0 0 0 .15em red, -0.9em 0 0 0 red, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: aqua; /*PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
     margin: 50px 0 5px 0;
@@ -166,8 +166,8 @@ body {
 
 /* CHASSIS: 4 box del->tras // WHEELS: 4 box (del-r, del-l, tras-r, tras-l)  */
 #life-3 {
-    box-shadow: 1.5em 0 0 -.07em white, 1em 0 0 0 white, 0 0 0 .15em white, -0.9em 0 0 0 white, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
-    background-color: gold; /*THIS IS PILOT, CENTRAL POINT REFERENCE */
+    box-shadow: 1.5em 0 0 -.07em red, 1em 0 0 0 red, 0 0 0 .15em red, -0.9em 0 0 0 red, 1em .95em 0 -.05em black, 1em -.90em 0 -.05em black, -1em 1em 0 0 black, -1em -1em 0 0 black;
+    background-color: aqua; /*PILOT, CENTRAL POINT REFERENCE */
     width: 1em;
     height: 1em; 
     margin: 50px 0 5px 0;
@@ -219,15 +219,16 @@ body {
 #game-over {
     /*background-image: url("../img/game-over-logo.png");*/
     background-repeat: no-repeat;
-    height: 630px;
-    width: 1122px;
+    height: 620px;
+    width: 1120px;
     margin: 0 auto;
     position: fixed;
     top: 1px;
     left: 120px;
     opacity: 0;
     z-index: 9999;
-    transition-duration: 4000ms;
+    transition-duration: 3000ms;
+    transition-timing-function: ease;
     
     
 }
@@ -273,16 +274,10 @@ body {
     font-size: 30px;
 }
 
-
 .button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
-
-
-
-
 
 
 
@@ -296,23 +291,3 @@ body {
 }
 
 
-/*.car {
-  animation-duration: 1s;
-  animation-name: ease;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-}
-
-
-@keyframes ease {
-  from {
-    margin-right: 0%;
-    width: 20%
-  }
-
-  to {
-    margin-left: 30%;
-    width: 30%;
-  }
-}
-*/
