@@ -3,8 +3,8 @@ Welcome to 70`s CAR SIMULATOR !
 
 In memory of the 1976 Indy 500, when Steve Jobs still worked with Steve Wozniak for Atari. This is a tribute to them.
 
-<img src="./img/steve-jobs-steve-wozniak.jpg" alt="Steve Jobs and Steve Wozniak picture">
-<img src="./img/Indy500.png" alt="Indy 500 game picture">
+<img src="./img/steve-jobs-steve-wozniak.jpg" width="250" alt="Steve Jobs and Steve Wozniak picture"/>
+<img src="./img/Indy500.png" width="250" alt="Indy 500 game picture"/>
 
 
 Walk into any arcade in the late 70s and early 80s, and you were sure to find one of the Sprint racing games. Even though the graphics were simple, the action was intense and drifting around the tracks alone or with a friend was always a blast.
@@ -25,5 +25,7 @@ The game starts by pressing the **START** key and after the start sound, you hav
 If you want to play again press the **RESET** key.
 
 Good luck and enjoy...
+
+<img src="./img/car-simulator.png" width="350" alt="70´s Car Simulator picture"/>
 
 
